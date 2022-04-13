@@ -15,7 +15,6 @@ Valentin Adelaide adelaide.valentin@gmail.com
 <h2>
 Profesores
   </h2>
-  <hr>
 <h1>
 R Palma
   <p>
