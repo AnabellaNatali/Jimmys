@@ -23,12 +23,14 @@ R. Palma
   ricardo.rpalma@gmail.com
   <hr>
   <p>
+  <h2> 
 A. Gomez
     </h2>
     eclesur.masera@gmail.com
   </p>
   <hr>
     <p>
+  <h2> 
 Gustavo A. Masera
     </h2>
     gustavo.masera@gmail.com
