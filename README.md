@@ -16,5 +16,7 @@ Valentin Adelaide adelaide.valentin@gmail.com
 Profesores
 <h1>
 R Palma
+  <p>
 A Gomez
+  </p>
 </h1>
