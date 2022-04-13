@@ -12,21 +12,23 @@ Ernesto Villasante ernestovillasante@gmail.com
       <p>
 Valentin Adelaide adelaide.valentin@gmail.com
         </p>
-<h2>
-Profesores
-  </h2>
+
 <h1>
+Profesores
+ </h1>
+  
+<h2>  
 R. Palma
-  </h1>
+ </h2>
   ricardo.rpalma@gmail.com
   <p>
 A. Gomez
-    </h1>
+    </h2>
     eclesur.masera@gmail.com
   </p>
     <p>
 Gustavo A. Masera
-    </h1>
+    </h2>
     gustavo.masera@gmail.com
   </p>
 
