@@ -21,11 +21,13 @@ Profesores
 R. Palma
  </h2>
   ricardo.rpalma@gmail.com
+  <hr>
   <p>
 A. Gomez
     </h2>
     eclesur.masera@gmail.com
   </p>
+  <hr>
     <p>
 Gustavo A. Masera
     </h2>
