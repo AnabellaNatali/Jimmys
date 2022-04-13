@@ -4,13 +4,13 @@ Anabella Bottasso  natali.anabella@gmail.com
 Manuel Lopez  manuelignaciolopez222@gmail.com
   </p>
   <p>
-Sebastian Zaragoza  sebaema2050@gmail.com
+Sebastian Zaragoza sebaema2050@gmail.com
     </p>
     <p>
-Ernesto Villasante 
+Ernesto Villasante ernestovillasante@gmail.com
       </p>
       <p>
-Valentin Adelaide
+Valentin Adelaide adelaide.valentin@gmail.com
         </p>
 
 Profesores
