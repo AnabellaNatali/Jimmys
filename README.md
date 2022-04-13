@@ -1,18 +1,31 @@
 # Jimmys
-Anabella Bottasso  natali.anabella@gmail.com
-<p>
-Manuel Lopez  manuelignaciolopez222@gmail.com
-  </p>
-  <p>
-Sebastian Zaragoza sebaema2050@gmail.com
-    </p>
-    <p>
-Ernesto Villasante ernestovillasante@gmail.com
-      </p>
-      <p>
-Valentin Adelaide adelaide.valentin@gmail.com
-        </p>
-
+<h2> 
+Anabella Bottasso  
+  </h2> 
+    natali.anabella@gmail.com
+    <hr>
+<h2> 
+Manuel Lopez  
+  </h2> 
+    manuelignaciolopez222@gmail.com
+    <hr>
+ <h2> 
+Sebastian Zaragoza 
+  
+  </h2> sebaema2050@gmail.com
+  <hr>
+   <h2> 
+Ernesto Villasante 
+  </h2> 
+  ernestovillasante@gmail.com
+  <hr>
+    <h2> 
+Valentin Adelaide
+  </h2> 
+    adelaide.valentin@gmail.com
+    <hr>
+    <hr>
+        
 <h1>
 Profesores
  </h1>
