@@ -1,13 +1,13 @@
 # Jimmys
-Anabella Bottasso
+Anabella Bottasso natali.anabella@gmail.com
 <p>
-Manuel Lopez
+Manuel Lopez manuelignaciolopez222@gmail.com
   </p>
   <p>
-Sebastian Zaragoza
+Sebastian Zaragoza sebaema2050@gmail.com
     </p>
     <p>
-Ernesto Villasante
+Ernesto Villasante 
       </p>
       <p>
 Valentin Adelaide
