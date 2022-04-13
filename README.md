@@ -19,7 +19,6 @@ Profesores
 R. Palma
   </h1>
   <p>
-  <h1>
 A. Gomez
     </h1>
   </p>
