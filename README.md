@@ -12,8 +12,10 @@ Ernesto Villasante ernestovillasante@gmail.com
       <p>
 Valentin Adelaide adelaide.valentin@gmail.com
         </p>
-
+<h2>
 Profesores
+  </h2>
+  <hr>
 <h1>
 R Palma
   <p>
