@@ -39,7 +39,7 @@ R. Palma
   <h2> 
 A. Gomez
     </h2>
-    eclesur.masera@gmail.com
+    eclesur@gmail.com
   </p>
   <hr>
     <p>
