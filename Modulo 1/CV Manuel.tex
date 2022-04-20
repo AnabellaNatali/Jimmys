@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.4, 13 Nov 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{hyperref}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{0072BB}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Manuel Ignacio Lopez}
+\tagline{Engineering student, Data Analyst \& Learning Enthusiast}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{ CVph}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+
+\cvachievement{\small \faWhatsapp}{ \href{https://api.whatsapp.com/send?phone=+542613041240&text=Hola!+Mi+nombre+es+_+_+_+_+_,+de+la+empresa+_+_+_+_+_+_+_+le+hablo+para+...}{ whatsapp.me}}
+  
+  \hrulefill
+    \location{Mendoza, Argentina}
+   
+  \email{manuelignaciolopez222@gmail.com}
+%\phone{261304}
+ % \mailaddress{Address, Street, 00000 County}
+
+
+
+
+% \faWhatsap  
+%  \twitter{@marissamayer}
+  \linkedin{manuelignaciolopez}
+\github{ManuelIgnacioLopez} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+  
+
+  
+  
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Data Analytics  \& Sales}{\href{http:/somoscorpora.com/}{ Corpora} }{ August 2021 -- Ongoing}{Mendoza, Argentina}
+        Analytics
+\begin{itemize}
+\item Guided and Produces Analytics informs, Dashboards and Presentations.
+\item Worked with a team of Data analytics built of industrial engineering students.
+\item Used PowerBi, Python (Google Collaboratoty)
+\end{itemize}
+         Sales
+\begin{itemize}
+\item Worked in the sales team in witch we guided negotiations using Harvard Negotiation method, to agree upon a budget and the bounds of the agreement.
+\item Used storytelling, Design Thinking, Agile methodologies and different disciplines. 
+\end{itemize}
+      
+\divider
+
+\cvevent{Sponsorship Manager }{\href{https://www.aareii.org.ar/}{AArEII Mendoza }  }{July 2021 -- Ongoing}{ Mendoza, Argentina}
+
+  Sales
+\begin{itemize}
+\item  Worked in the sales team in witch we guided negotiations using Harvard Negotiation method, to agree upon a budget and the bounds of the agreement.
+\item Used storytelling, Design Thinking, Agile methodologies and different disciplines. 
+\end{itemize}
+
+  Managment
+\begin{itemize}
+\item Guided and organized the activities of my 8+ people team team made up of students both men and women of different disciplines.
+\item Was part of the group of people who decided how our project (Argentinian Congress for Industrial Engineering Students and related careers), guided an coordinated meetings, public talks and events. 
+
+\divider
+
+\end{itemize}
+\cvsection{Some of my courses} 
+
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{2cm}{0.7cm}{%
+  20/13em/accent!30/Agile Progect Management Bootcamp (Global Analytics),
+  28/9em/accent!60/Data Governance (UBA),
+,
+  27/11em/accent!40/Giving helpful Feedback (University of Colorado) ,
+  20/8em/accent!20/\footnotesize Financial Markets (Yale),
+  15/9em/accent/Others,
+  20/8em/accent!20/Hardvard Negotiation Method (IEP)
+}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+\hrulefill
+
+\href{https://www.linkedin.com/in/manuelignaciolopez/details/certifications/}{ \small \faHandPointRight Certifications}
+
+\switchcolumn
+\cvsection{I am...}
+\small
+\cvachievement{\faHeartbeat}{Persistence \& Mindset}{I never leave hallfway what i'm doing or satisfy with the bare minimum }
+
+\divider
+
+\cvachievement{\faChartLine}{Healthy Competitivity}{I try to surpass myself each time I come across a known challenge, and I try to stimulate both teamwork and competition in my work groups. }
+
+\divider
+
+\cvachievement{\faTrophy}{NASA Space Apps}{Finalists for   \href{https://2021.spaceappschallenge.org/challenges/statements/measuring-the-value-of-earth-observations/teams/duq-method/project }{DUQ Method}}
+
+\divider
+
+\cvachievement{\faFutbol}{Love doing Sports}{Football, Tennis \& Karate are my favourite sports}
+
+
+\cvachievement{\faGrin}{Something I loved doing}{ I was Assistant Professor in the subject Geometry for two years straight.
+I learned a lot in what respects to teaching, listening, and being patient and realizing that each person learns and understands in a different way. Moreover, I made several YouTube videos explaining how to use a graphing tool, called geogebra, so as to promote the usage of technology.}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working }
+\cvtag{Persuasive}\\
+\cvtag{Organized \& Leader}
+\cvtag{Fast Learner }
+\divider\smallskip
+
+\cvtag{Python Jr.}
+\cvtag{Proyect Management (PMI) \&  Agile}
+\cvtag{JavaScript Jr.}
+
+
+\cvsection{Languages}
+
+\cvskill{Spanish}{5}
+% \divider
+\cvskill{English}{4.5}
+% \divider
+\cvskill{German}{3.5} %% supports X.5 values.
+\cvskill{French}{2.5}
+% \divider
+
+\cvsection{Education}
+
+\cvevent{Industrial Engineering}{Universidad Nacional de Cuyo}{January 2019--Ongoing}{}
+
+\cvevent{Diploma\ Circular Economy}{Universidad de Cordoba}{July 2021-December 2021}{}
+
+\divider
+
+
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+
+
+\end{paracol}
+
+
+\end{document}
