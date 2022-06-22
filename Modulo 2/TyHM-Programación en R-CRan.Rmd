@@ -1,0 +1,189 @@
+---
+title: "TyHM - Programación en R-CRan"
+author:
+- Sebastián Zaragoza^[sebaema2050@gmail.com]
+- Manuel Lopez^[manuelignaciolopez222@gmail.com]
+- Anabella Bottasso^[natali.anabella@gmail.com]
+- Ernesto Villasante^[ernestovillasante@gmail.com]
+- Valentin Adelaide^[adelaide.valentin@gmail.com]
+
+date: '2022-06-12'
+output:
+  pdf_document: default
+  html_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introducción 
+En este trabajo se estudiarán diferentes conceptos y funciones del lenguaje de programación R-CRan.
+Se revisarán y compararán distintos algoritmos
+
+
+## Generar un vector secuencia
+Vamos a generar un vector secuencia a partir de un algoritmo iterativo "for", posteriormente usaremos el comando "seq" de R y luego compararemos los tiempos con systime.
+
+### Secuencia generada con "for"
+```{r}
+A<-0
+start_time<-Sys.time()
+for (i in 1:50000) { A[i] <- (i*2)}
+end_time<-Sys.time()
+end_time-start_time
+head (A)
+```
+```{r}
+tail(A)
+```
+
+
+
+### Secuencia generada con R
+```{r}
+start_time<-Sys.time()
+A <- seq(1,1000000, 2)
+end_time<-Sys.time()
+end_time-start_time
+head (A)
+```
+```{r}
+tail(A)
+```
+Finalmente, podemos observar a partir de comparar los tiempos obtenidos gracias a la función "sys.time" que la secuencia generada con R es mas rápida.
+
+## Implementación de la serie Fibonacci
+La serie Fibonacci comienza con los números 0 y 1, a partir de estos cada uno de los siguientes términos es la suma de los dos anteriores, a continuación puede verse el código para implementar la serie:
+```{r, echo=TRUE}
+A<-0
+B<-1
+F[1]<-A
+F[2]<-B
+for (i in 3:100) {F[i] <- (F[i-1]+F[i-2])}
+head (F)
+
+```
+Posteriomente se quiere saber la cantidad de iteraciones necesarias para generar un número de la serie mayor que 1000000. Para esto vamos a eliminar la F con el fin de poder comenzar desde cero con la implementación de la serie.
+A continuación se puede observar el código correspondiente a la obtención de las iteraciones:
+```{r}
+remove(F)
+A<-0
+B <- 1
+C <- 0
+it <- 30
+F[1]<-A
+F[2]<-B
+for(i in 3:(2+it)) {
+F[i]<-(F[i-1]+F[i-2])
+}
+C <- length(F)
+message("Para ",it," iteraciones, el penúltimo valor es: \n",F[C-1],"\n","y el último es: \n"
+,F[C])
+```
+En conclusión se observa que se necesitan 30 iteraciones para superar el número 1000000.
+
+## Ordenación de un vector por método burbuja
+En este apartado vamos a ordenar un vector con el método burbuja, que funciona revisando cada elemento de la lista y comparándolo con el siguiente, luego de compararlos los intercambia de posición (si están en orden equivocado), posteriormente se ordenará con el comando "SORT" de R. Luego se compararán ambos métodos con el método microbenchmark considerando una muestra de tamaño 20000.
+```{r}
+
+# Tomo una muestra de 20000 números ente 1 y 1000000
+XA<-sample(1:1000000,20000)
+# Creo una función para ordenar
+burbuja <- function(x){
+n<-length(x)
+for(j in 1:(n-1)){
+for(i in 1:(n-j)){
+if(x[i]>x[i+1]){
+temp<-x[i]
+x[i]<-x[i+1]
+x[i+1]<-temp
+}
+}
+}
+return(x)
+}
+burbuja<-burbuja(XA)
+#Muestra obtenida
+#Por una cuestión de espacio no se pedirá al código que muestre el vector ordenado para 
+#generar el pdf ya que esto ocuparía demasiado espacio, de todas formas antes de 
+#generar el pdf se pidió al programa mostrar este vector para comprobar que efectivamente 
+#estuviera ordenado lo cual dió resultados satisfactorios ya que efectivamente 
+#estaba ordenado. A continuación se deja una línea en la que se puede pedir que muestre el 
+#vector simplemente borrando el "#"...
+#burbuja
+sortR<-sort(XA)
+#Idem anterior en cuanto a mostrar el vector.
+#sort
+#El siguiente código sirve para mostrar información en cuanto a rendimiento de ambos métodos
+library(microbenchmark)
+mbm <-microbenchmark(burbuja,sortR)
+mbm
+library(ggplot2)
+autoplot(mbm)
+
+```
+En conclusión se puede observar que el método burbuja tarda mas tiempo y consume mas recursos inicialmente que el comando "sort"
+
+
+## Progresión geométrica del COVid-19
+
+Primero descagamos la libreria de "readr", luego ingresamos los datos .csv a partir del archivo descargado de la página de la cátedra de la siguiente manera: File->Import dataset->from text(readr), luego se siguen las consignas de la guía y se copian los pasos realizados en lenguaje r para pegarlos en el siguiente código:
+
+```{r}
+library(readr)
+casos <- read_delim("descargaDelProfe/casos.csv", 
+    delim = ";", escape_double = FALSE, col_types = cols(Fecha = col_date(format = "%m/%d/%Y"), 
+        Casos = col_integer()), trim_ws = TRUE, 
+    skip = 1)
+```
+### Estadística de casos
+```{r}
+summary(casos$Casos)
+```
+Podemos calcular el factor de contagios dividiendo los infectados de hoy sobre los de ayer, en el siguiente código se muestra cómo hacerlo:
+```{r}
+m <- length(casos$Casos)
+F <- (casos$Casos[2:m])/(casos$Casos[1:m-1])
+F[m-1]
+```
+Este es el factor de contagios
+
+### Estadísticos de F (factor de contagios)
+```{r}
+mean(F,na.rm = TRUE)
+```
+```{r}
+sd(F,na.rm = TRUE)
+```
+```{r}
+var(F,na.rm = TRUE)
+```
+
+### Ploteo de datos 
+Con los datos importados anteriormente procedimos a realizar un ploteo para poder visualizarlos. A continuación se muestran los códigos implementados para los distintos gráficos.
+
+```{r}
+casos$Casos
+plot(casos$Casos ,main="Contagios 2020",ylab="Semana",xlab="Casos positivos de Covid")
+
+```
+
+```{r}
+hist(casos$Casos,breaks = 50,main="Contagios en la Argentina",xlab="Pacientes por semana",ylab="Frecuencia relativa")
+```
+
+```{r}
+plot(density(na.omit(casos$Casos)),main="Densidad de contagios en la Argentina", ylab = "Densidad", xlab = "Pacientes por semana")
+```
+
+En estos gráficos se pueden observar la cantidad de variables de covid detectadas en el lapso de tiempo en estudio, para analizar esto se deben observar las campanas de Gauss. 
+
+La cantidad de campanas en el gráfico de densidad de contagios se relaciona con un índice de contagio distinto, por ejemplo cuando hay mas densidad de contagios se podría asociar a una variable mas contagiosa, es por esto q las dos campanas de Gauss detectadas hacen referencia a dos variables de covid distintas.
+
+
+
+
